@@ -1,0 +1,249 @@
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+}
+.fa-magnifying-glass:before, .fa-search:before {
+    content: "\f002";
+    color: #414141;
+}
+input:focus-visible {
+    outline:none ;
+}
+
+.filter-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 279px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.apply-filters-btn {
+  background-color: white;
+    color: #01458e;
+    border: 2px solid #01458e;
+    padding: 8px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 23px;
+    height: 42px;
+    border: 2px solid #01458e;
+}
+
+.apply-filters-btn:hover {
+  background: #01458e !important;
+    border: 2px solid #01458e;
+    color: #ffffff;
+    transition: 0.7s;
+}
+
+.clear-filters-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 19px;
+    width: 100%;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c82333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+    border: 2px solid #6d6d6d;
+    border-radius: 83px;
+    padding: 2px 7px;
+    color: #6d6d6d;
+}
+
+.close-btn:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 60px 50px;
+}
+
+
+.search-wrapper {
+  position: relative;
+    display: inline-block;
+    width: 100%;
+    flex: 1 0;
+}
+
+#app .search-wrapper input {
+  width: -webkit-fill-available;
+    height: 42px;
+    border-radius: 7px;
+    border: none;
+    background: #e0efff;
+    padding-left: 34px;
+    font-size: 15px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888; /* Icon color */
+}
+
+.cart-button {
+  background-color: #01458e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #01458e;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    height: 43px;
+    margin-left: 23px;
+}
+
+.cart-button:hover {
+  background-color: #ffffff !important;
+    color: #01458e;
+    transition: 0.7s;
+
+}
+
+.categoryList .categoryItem {
+    display: none; /* Hide all items by default */
+  }
+  
+  /* Show the first 5 items */
+  .categoryList .categoryItem:nth-child(-n+5) {
+    display: block;
+  }
+
+  .filter-panel h2 {
+    margin-top: 0px;
+    text-align: left;
+}
+.filter-panel h3 {
+    text-align: left;
+}
+
+.categoryItem {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+
+.categoryItem input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  /* Style the label to look like a minimal checkbox */
+  .categoryItem label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+  }
+  
+  /* Create the custom checkbox */
+  .categoryItem label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 1px solid #b6b6b6;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  
+  /* When checkbox is checked, change background color */
+  .categoryItem input[type="checkbox"]:checked + label::before {
+    background-color: #01458e;
+    border-color: #01458e;
+  }
+  
+  /* Optional: Add a checkmark inside when checked */
+  .categoryItem input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+
+  select#sorting {
+    margin-left: 0px;
+    height: 36px;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    padding: 0px 6px;
+    cursor: pointer;
+}
+
+select#sorting:focus-visible {
+    outline:none;}
+.sortLabel{
+    width: 100%;
+    display: inline-block;
+    margin: 11px 0px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width : 991.5px) {
+
+
+    
+        #app {
+          
+            margin: 36px 11px;
+        }
+    
+}
+
+@media only screen and (max-width : 600px) {
+.searchBar{
+    flex-direction: column;
+}
+.apply-filters-btn{
+    margin-left: 1px;
+    margin-top: 14px;
+}
+}
